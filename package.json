@@ -1,6 +1,11 @@
 {
+  "name": "form-validation",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
   "devDependencies": {
-    "parcel": "^2.10.3"
+    "parcel": "latest"
   }
 }
-
