@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="Form">
+        <fieldset>
+            <legend>Form validation (* are required)</legend>
+            <label id="name-field">Name: *
+                <input type="text" name="name" id="name" placeholder="Enter your name" />
+            </label>
+            <br>
+            <br>
+            <label id="email-field">Email: *
+                <input type="email" name="email" id="email" placeholder="Enter your email (must be email)"  >
+                <br>
+                <br>
+            </label>
+            <br>
+            <br>
+            <label>Age (optional):
+                <input type="number" name="age" id="age" placeholder="Enter your age" />
+            </label>
+            <br>
+            <br>
+            <label>What type of web developer are you?
+                <select>
+                    <option value="option-1">Front-End Engineer</option>
+                    <option value="option-2">Back-End Engineer</option>
+                    <option value="option-3">Full-Stack Engineer</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Submit your info</legend>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

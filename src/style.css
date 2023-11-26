@@ -1,0 +1,8 @@
+#name:placeholder-shown {
+    border: 2px solid red;
+    background: rgba(255, 0, 0, 0.5);
+}
+#email:placeholder-shown {
+    border: 2px solid red;
+    background: rgba(255, 0, 0, 0.5);
+}
