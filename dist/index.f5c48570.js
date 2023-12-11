@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"bl3iR":[function(require,module,exports) {
+})({"bcmUh":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -578,29 +578,32 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 let inputs = document.querySelectorAll("input");
 let p = document.createElement("p");
 let p1 = document.createElement("p");
-let Form = document.querySelector("Form");
+let Form = document.querySelector("form");
 p.textContent = "This field is required";
 p1.textContent = "This field is required";
+p1.id = "ID";
 p.style.color = "red";
 p1.style.color = "red";
-p1.id = "id";
 const formValidation = (event)=>{
     if (inputs[0].value == "") {
-        document.querySelector("#name-field").appendChild(p);
-        event.preventDefault();
-    } else document.querySelector("#name-field p").remove();
-    if (inputs[1].value == "") {
-        document.querySelector("#email-field").appendChild(p1);
+        if (!document.querySelector("#name-field p")) document.querySelector("#name-field").appendChild(p);
         event.preventDefault();
     } else {
-        document.querySelector("#email-field #id").remove();
-        console.log("Works fine!");
+        let errorMessage = document.querySelector("#name-field p");
+        if (errorMessage) errorMessage.remove();
+    }
+    if (inputs[1].value == "") {
+        if (!document.querySelector("#email-field #ID")) document.querySelector("#email-field").appendChild(p1);
+        event.preventDefault();
+    } else {
+        let errorMessage = document.querySelector("#email-field #ID");
+        if (errorMessage) errorMessage.remove();
     }
 };
 Form.addEventListener("submit", formValidation);
 document.querySelector("#name").addEventListener("input", formValidation);
 document.querySelector("#email").addEventListener("input", formValidation);
 
-},{}]},["bl3iR","8ZNvh"], "8ZNvh", "parcelRequire65ba")
+},{}]},["bcmUh","8ZNvh"], "8ZNvh", "parcelRequire65ba")
 
 //# sourceMappingURL=index.f5c48570.js.map
